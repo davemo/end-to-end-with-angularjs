@@ -1,0 +1,27 @@
+<div id="register" class="row">
+  <div class="large-6 large-offset-3">
+    <form ng-submit="register()">
+      <fieldset class="radius">
+        <div class="row">
+          <div class="large-6 columns">
+            <input type="text" name="username" placeholder="username" ng-model="user.username" required/>
+          </div>
+            <div class="large-6 columns">
+            <input type="password" name="password" placeholder="password" ng-model="user.password" required/>
+          </div>
+        </div>
+
+        <div class="row">
+          <label>User Role</label>
+          <select name="role" ng-options="r.value as r.label for r in roles" required ng-model="user.role"></select>
+        </div>
+
+        <div class="row">
+          <div class="large-12 columns">
+            <button type="submit" class="button large expand radius">Register</button>
+          </div>
+        </div>
+      </fieldset>
+    </form>
+  </div>
+</div>
