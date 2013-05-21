@@ -1,7 +1,7 @@
 end-to-end-with-angularjs
 ==================
 
-Screencast published May 21, 2013 TODO: insert youtube link
+[Screencast published May 21, 2013](http://www.youtube.com/watch?v=hqAyiqUs93c)
 
 This is an extension of my screencast ["Intro to Angular JS"](http://www.youtube.com/watch?v=8ILQOFAgaXE) that focuses more on intermediate/advanced topics and walks through creating a working web application on top of the Laravel 4 Web Application Framework. Things you can expect to learn by watching the screencast:
 
