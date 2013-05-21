@@ -10,11 +10,11 @@ app.config(function($httpProvider) {
     var error = function(response) {
       if(response.status === 401) {
         SessionService.unset('authenticated');
-        FlashService.show(response.data.flash);
         $location.path('/login');
+        FlashService.show(response.data.flash);
         return $q.reject(response);
       } else {
-        return $.reject(response);
+        return $q.reject(response);
       }
     };
 
