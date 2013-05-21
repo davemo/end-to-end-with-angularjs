@@ -7,12 +7,11 @@ This is an extension of my screencast ["Intro to Angular JS"](http://www.youtube
 
 * $http
 * taking the [AuthenticationService](https://github.com/davemo/intro-to-angularjs/blob/master/app/js/app.js#L19) we built earlier end-to-end
-* communicating with a database (MySQL)
-* laravel 4 migrations, controllers, models, and authentication
 * creating a FlashService for displaying alerts to users
 * access control for client-side routes with $rootScope and $routeProvider
 * $routeProvider.resolve property and making view rendering data dependent
 * $httpProvider.responseInterceptors and logging out users automatically if serverside sessions expire
+* laravel 4 migrations, controllers, models, and authentication
 
 ## Requirements:
 
