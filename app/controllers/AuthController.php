@@ -8,9 +8,9 @@ class AuthController extends BaseController {
 
   public function secrets() {
     if(Auth::check()) {
-      return 'You logged in wtf?';
+      return 'You are logged in, here are secrets.';
     } else {
-      return 'You aint logged in!';
+      return 'You aint logged in, no secrets for you.';
     }
   }
 
