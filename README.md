@@ -11,6 +11,7 @@ This is an extension of my screencast ["Intro to Angular JS"](http://www.youtube
 * laravel 4 migrations, controllers, models, and authentication
 * creating a FlashService for displaying alerts to users
 * access control for client-side routes with $rootScope and $routeProvider
+* $routeProvider.resolve property and making view rendering data dependent
 * $httpProvider.responseInterceptors and logging out users automatically if serverside sessions expire
 
 ## Requirements:

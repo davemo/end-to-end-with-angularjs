@@ -12,6 +12,16 @@ app.config(function($routeProvider) {
     controller: 'HomeController'
   });
 
+  $routeProvider.when('/books', {
+    templateUrl: 'templates/books.html',
+    controller: 'BooksController',
+    resolve: {
+      books : function(BookService) {
+        return BookService.get();
+      }
+    }
+  });
+
   $routeProvider.otherwise({ redirectTo: '/login' });
 
 });
@@ -25,6 +35,14 @@ app.run(function($rootScope, $location, AuthenticationService, FlashService) {
       FlashService.show("Please log in to continue.");
     }
   });
+});
+
+app.factory("BookService", function($http) {
+  return {
+    get: function() {
+      return $http.get('/books');
+    }
+  };
 });
 
 app.factory("FlashService", function($rootScope) {
@@ -93,6 +111,10 @@ app.controller("LoginController", function($scope, $location, AuthenticationServ
       $location.path('/home');
     });
   };
+});
+
+app.controller("BooksController", function($scope, books) {
+  $scope.books = books.data;
 });
 
 app.controller("HomeController", function($scope, $location, AuthenticationService) {

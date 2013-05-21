@@ -5,3 +5,7 @@ h1,h2,h3,h4,h5 {
 button {
   margin-bottom: 0px !important;
 }
+
+.books {
+  list-style-type: none;
+}

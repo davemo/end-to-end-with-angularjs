@@ -15,6 +15,14 @@ Route::get('/', function() {
 	return View::make('singlepage');
 });
 
+Route::get('/books', function() {
+  return Response::json(array(
+    array('title' => 'Great Expectations', 'author' => 'Dickens'),
+    array('title' => 'Foundation', 'author' => 'Asimov'),
+    array('title' => 'Treasure Island', 'author' => 'Stephenson')
+  ));
+});
+
 Route::post('/auth/login', 'AuthController@login');
 Route::get('/auth/logout', 'AuthController@logout');
 Route::get('/auth/status', 'AuthController@status');
