@@ -21,6 +21,8 @@ Route::get('/books', function() {
     array('title' => 'Foundation', 'author' => 'Asimov'),
     array('title' => 'Treasure Island', 'author' => 'Stephenson')
   ));
+
+  // return Response::json(array('flash' => 'Session expired'), 401);
 });
 
 Route::post('/auth/login', 'AuthController@login');

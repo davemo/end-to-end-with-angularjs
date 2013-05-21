@@ -1,5 +1,32 @@
 var app = angular.module("app", []);
 
+app.config(function($httpProvider) {
+
+  var logsOutUserOn401 = function($location, $q, SessionService, FlashService) {
+    var success = function(response) {
+      return response;
+    };
+
+    var error = function(response) {
+      if(response.status === 401) {
+        SessionService.unset('authenticated');
+        FlashService.show(response.data.flash);
+        $location.path('/login');
+        return $q.reject(response);
+      } else {
+        return $.reject(response);
+      }
+    };
+
+    return function(promise) {
+      return promise.then(success, error);
+    };
+  };
+
+  $httpProvider.responseInterceptors.push(logsOutUserOn401);
+
+});
+
 app.config(function($routeProvider) {
 
   $routeProvider.when('/login', {
