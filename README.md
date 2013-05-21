@@ -6,11 +6,12 @@ Screencast published May 21, 2013 TODO: insert youtube link
 This is an extension of my screencast ["Intro to Angular JS"](http://www.youtube.com/watch?v=8ILQOFAgaXE) that focuses more on intermediate/advanced topics and walks through creating a working web application on top of the Laravel 4 Web Application Framework. Things you can expect to learn by watching the screencast:
 
 * $http
+* $rootScope
 * taking the [AuthenticationService](https://github.com/davemo/intro-to-angularjs/blob/master/app/js/app.js#L19) we built earlier end-to-end
 * creating a FlashService for displaying alerts to users
 * access control for client-side routes with $rootScope and $routeProvider
-* $routeProvider.resolve property and making view rendering data dependent
 * $httpProvider.responseInterceptors and logging out users automatically if serverside sessions expire
+* $routeProvider.resolve property and making view rendering data dependent
 * laravel 4 migrations, controllers, models, and authentication
 
 ## Requirements:
