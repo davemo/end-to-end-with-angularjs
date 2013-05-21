@@ -31,17 +31,18 @@ Installing PHP 5.4 and MCrypt is the most tedious part of getting up and running
 4. Tap the PHP keg from @josegonzalez: `brew tap josegonzalez/homebrew-php`
 5. Install PHP 5.4 `brew install php54`
 6. Install MCrypt `brew install php54-mcrypt` (this will automatically link the binary into the php.ini for you)
-7. Create a database named `laravelapp` in your MySQL (or SQLite) instance (if you are using SQLite you will have to modify `app/config/database.php` to change the default driver to `sqlite` and point the laravel config to the file you want to use for your SQLite database)
-8. Install [Composer](http://getcomposer.org/) (think of it like homebrew, or npm, or apt-get, but for PHP modules)
+7. Install [Composer](http://getcomposer.org/) (think of it like homebrew, or npm, or apt-get, but for PHP modules)
 
 ## App Installation Instructions:
 
 1. clone this repo: `git clone https://github.com/davemo/end-to-end-with-angularjs.git`
 2. install composer dependencies `composer install`
-3. run database migrations `php artisan migrate`
-4. seed the database `php artisan db:seed`
-5. run the app `php artisan serve`
-6. browse to `http://localhost:8000` and log in with email `admin@example.org` and password `admin`
+3. create a database called `laravelapp`
+4. create the sessions migration `php artisan session:table`
+5. run database migrations `php artisan migrate`
+6. seed the database `php artisan db:seed`
+7. run the app `php artisan serve`
+8. browse to `http://localhost:8000` and log in with email `admin@example.org` and password `admin`
 
 Once you have the app up and running you can visit `http://localhost:8000` and you will see the Login Form.
 
