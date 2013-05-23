@@ -7,10 +7,11 @@
   <link rel="stylesheet" href="/css/foundation.min.css">
   <link rel="stylesheet" href="/css/style.css">
   <script src="/js/angular.js"></script>
+  <script src="/js/angular-sanitize.js"></script>
   <script src="/js/underscore.js"></script>
   <script src="/js/app.js"></script>
   <script>
-    angular.module("app").constant("CSRF_TOKEN", {csrf_token: '<?php echo csrf_token(); ?>'});
+    angular.module("app").constant("CSRF_TOKEN", '<?php echo csrf_token(); ?>');
   </script>
 </head>
 <body>

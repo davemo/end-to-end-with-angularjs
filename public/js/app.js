@@ -1,4 +1,4 @@
-var app = angular.module("app", []);
+var app = angular.module("app", ['ngSanitize']);
 
 app.config(function($httpProvider) {
 
@@ -97,7 +97,7 @@ app.factory("SessionService", function() {
   }
 });
 
-app.factory("AuthenticationService", function($http, SessionService, FlashService, CSRF_TOKEN) {
+app.factory("AuthenticationService", function($http, $sanitize, SessionService, FlashService, CSRF_TOKEN) {
 
   var cacheSession   = function() {
     SessionService.set('authenticated', true);
@@ -111,9 +111,17 @@ app.factory("AuthenticationService", function($http, SessionService, FlashServic
     FlashService.show(response.flash);
   };
 
+  var sanitizeCredentials = function(credentials) {
+    return {
+      email: $sanitize(credentials.email),
+      password: $sanitize(credentials.password),
+      csrf_token: CSRF_TOKEN
+    };
+  };
+
   return {
     login: function(credentials) {
-      var login = $http.post("/auth/login", angular.extend(credentials, CSRF_TOKEN));
+      var login = $http.post("/auth/login", sanitizeCredentials(credentials));
       login.success(cacheSession);
       login.success(FlashService.clear);
       login.error(loginError);
