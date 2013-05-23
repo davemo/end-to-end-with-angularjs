@@ -2,7 +2,6 @@
 <html lang="en" ng-app="app">
 <head>
   <meta charset="UTF-8">
-  <meta name="csrf-token" ng-init="csrf_token='<?php echo csrf_token(); ?>'">
   <title>AngularJS AuthenticationService Example</title>
   <link rel="stylesheet" href="/css/normalize.css">
   <link rel="stylesheet" href="/css/foundation.min.css">
@@ -10,6 +9,9 @@
   <script src="/js/angular.js"></script>
   <script src="/js/underscore.js"></script>
   <script src="/js/app.js"></script>
+  <script>
+    angular.module("app").constant("CSRF_TOKEN", {csrf_token: '<?php echo csrf_token(); ?>'});
+  </script>
 </head>
 <body>
 

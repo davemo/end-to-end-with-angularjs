@@ -97,7 +97,7 @@ app.factory("SessionService", function() {
   }
 });
 
-app.factory("AuthenticationService", function($http, SessionService, FlashService) {
+app.factory("AuthenticationService", function($http, SessionService, FlashService, CSRF_TOKEN) {
 
   var cacheSession   = function() {
     SessionService.set('authenticated', true);
@@ -113,7 +113,7 @@ app.factory("AuthenticationService", function($http, SessionService, FlashServic
 
   return {
     login: function(credentials) {
-      var login = $http.post("/auth/login", credentials);
+      var login = $http.post("/auth/login", angular.extend(credentials, CSRF_TOKEN));
       login.success(cacheSession);
       login.success(FlashService.clear);
       login.error(loginError);
@@ -131,7 +131,7 @@ app.factory("AuthenticationService", function($http, SessionService, FlashServic
 });
 
 app.controller("LoginController", function($scope, $location, AuthenticationService) {
-  $scope.credentials = { email: "", password: "", csrf_token: $scope.csrf_token };
+  $scope.credentials = { email: "", password: "" };
 
   $scope.login = function() {
     AuthenticationService.login($scope.credentials).success(function() {
