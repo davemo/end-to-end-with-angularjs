@@ -131,7 +131,7 @@ app.factory("AuthenticationService", function($http, SessionService, FlashServic
 });
 
 app.controller("LoginController", function($scope, $location, AuthenticationService) {
-  $scope.credentials = { email: "", password: "" };
+  $scope.credentials = { email: "", password: "", csrf_token: $scope.csrf_token };
 
   $scope.login = function() {
     AuthenticationService.login($scope.credentials).success(function() {
