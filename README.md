@@ -1,9 +1,13 @@
 end-to-end-with-angularjs
 ==================
 
-[Screencast published May 21, 2013](http://www.youtube.com/watch?v=hqAyiqUs93c)
+This repository covers material in 2 screencasts, 
+* [End to End with Angular JS](http://www.youtube.com/watch?v=hqAyiqUs93c) 
+* [Security with Angular JS](http://www.youtube.com/watch?v=18ifoT-Id54)
 
-This is an extension of my screencast ["Intro to Angular JS"](http://www.youtube.com/watch?v=8ILQOFAgaXE) that focuses more on intermediate/advanced topics and walks through creating a working web application on top of the Laravel 4 Web Application Framework. Things you can expect to learn by watching the screencast:
+This is an extension of my screencast [Intro to Angular JS](http://www.youtube.com/watch?v=8ILQOFAgaXE) that focuses more on intermediate/advanced topics and walks through creating a working web application on top of the Laravel 4 Web Application Framework. 
+
+Things you can expect to learn from **End to End with Angular JS**:
 
 * $http
 * $rootScope
@@ -13,6 +17,14 @@ This is an extension of my screencast ["Intro to Angular JS"](http://www.youtube
 * $httpProvider.responseInterceptors and logging out users automatically if serverside sessions expire
 * $routeProvider.resolve property and making view rendering data dependent
 * laravel 4 migrations, controllers, models, and authentication
+
+Things you can expect to learn from **Security with Angular JS**:
+
+* 3 common-sense ways to secure your web application
+* angular.constant
+* ng-init
+* ng-sanitize
+* Laravel CSRF support, route filters, and built in protection
 
 ## Requirements:
 
