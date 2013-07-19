@@ -12,10 +12,8 @@ app.config(function($httpProvider) {
         SessionService.unset('authenticated');
         $location.path('/login');
         FlashService.show(response.data.flash);
-        return $q.reject(response);
-      } else {
-        return $q.reject(response);
       }
+      return $q.reject(response);
     };
 
     return function(promise) {
