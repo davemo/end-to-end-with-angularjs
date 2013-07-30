@@ -52,11 +52,10 @@ Installing PHP 5.4 and MCrypt is the most tedious part of getting up and running
 2. install composer dependencies `composer install`
 3. create a database called `laravelapp`
 4. create your unique security key `php artisan key:generate`
-5. create the sessions migration `php artisan session:table`
-6. run database migrations `php artisan migrate`
-7. seed the database `php artisan db:seed`
-8. run the app `php artisan serve`
-9. browse to `http://localhost:8000` and log in with email `admin@example.org` and password `admin`
+5. run database migrations `php artisan migrate`
+6. seed the database `php artisan db:seed`
+7. run the app `php artisan serve`
+8. browse to `http://localhost:8000` and log in with email `admin@example.org` and password `admin`
 
 Once you have the app up and running you can visit `http://localhost:8000` and you will see the Login Form.
 
