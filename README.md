@@ -40,7 +40,7 @@ Installing PHP 5.4 and MCrypt is the most tedious part of getting up and running
 
 1. Install [Homebrew](http://mxcl.github.io/homebrew/)
 2. Make sure you correct any problems that `brew doctor` detects
-3. Install [Laravel 4](http://four.laravel.com/#install-laravel)
+3. Install [Laravel 4](http://laravel.com/docs/quick)
 4. Tap the PHP keg from @josegonzalez: `brew tap josegonzalez/php`
 5. Install PHP 5.4 `brew install php55`
 6. Follow the linking instructions for php55 that you see in `brew info php55`
