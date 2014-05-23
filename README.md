@@ -43,9 +43,8 @@ Installing PHP 5.4 and MCrypt is the most tedious part of getting up and running
 3. Install [Laravel 4](http://laravel.com/docs/quick)
 4. Tap the PHP keg from @josegonzalez: `brew tap josegonzalez/php`
 5. Install PHP 5.4 `brew install php55`
-6. Follow the linking instructions for php55 that you see in `brew info php55`
-7. Install MCrypt `brew install php55-mcrypt` (this will automatically link the binary into the php.ini for you)
-8. Install [Composer](http://getcomposer.org/) `brew install composer` (think of it like homebrew, or npm, or apt-get, but for PHP modules)
+6. Install MCrypt `brew install php55-mcrypt` (this will automatically link the binary into the php.ini for you)
+7. Install [Composer](http://getcomposer.org/) `brew install composer` (think of it like homebrew, or npm, or apt-get, but for PHP modules)
 
 ## App Installation Instructions:
 
