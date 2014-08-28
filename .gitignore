@@ -4,3 +4,11 @@
 composer.phar
 composer.lock
 .DS_Store
+
+app/config/database.php
+
+app/config/app.php
+
+app/config/app.php
+
+app/config/database.php
