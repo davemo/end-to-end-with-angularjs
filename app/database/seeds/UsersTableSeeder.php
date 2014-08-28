@@ -8,10 +8,11 @@ class UsersTableSeeder extends Seeder {
 
         $users = array(
             array(
-                'email'      => 'admin@example.org',
-                'password'   => Hash::make('admin'),
-                'created_at' => new DateTime,
-                'updated_at' => new DateTime
+                'email'         => 'admin@example.org',
+                'password'      => Hash::make('admin'),
+                'created_at'    => new DateTime,
+                'updated_at'    => new DateTime,
+                'remember_token'=> ''        
             )
         );
 
